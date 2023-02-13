@@ -38,16 +38,16 @@ class TestFileStorage(unittest.TestCase):
         """Tests __init__ with no arguments."""
         self.resetStorage()
         with self.assertRaises(TypeError) as e:
-            FileStorage.__init__()
-        msg = "descriptor '__init__' of 'object' object needs an argument"
+            storage = FileStorage()
+        msg = "TypeError: __init__() takes no arguments"
         self.assertEqual(str(e.exception), msg)
 
     def test_3_init_many_args(self):
         """Tests __init__ with many arguments."""
         self.resetStorage()
         with self.assertRaises(TypeError) as e:
-            b = FileStorage(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
-        msg = "FileStorage() takes no arguments"
+            storage = FileStorage(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+        msg = "TypeError: __init__() takes no arguments"
         self.assertEqual(str(e.exception), msg)
 
     def test_5_attributes(self):
@@ -62,11 +62,11 @@ class TestFileStorage(unittest.TestCase):
         self.resetStorage()
         self.assertEqual(storage.all(), {})
 
-        o = storage.classes()[classname]()
-        storage.new(o)
-        key = "{}.{}".format(type(o).__name__, o.id)
+        obj = classname()
+        storage.new(obj)
+        key = "{}.{}".format(type(obj).__name__, obj.id)
         self.assertTrue(key in storage.all())
-        self.assertEqual(storage.all()[key], o)
+        self.assertEqual(storage.all()[key], obj)
 
     def test_5_all_base_model(self):
         """Tests all() method for BaseModel."""
