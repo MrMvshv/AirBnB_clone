@@ -1,4 +1,15 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+"""
+
+Created on Fri Feb 10 16:00:23 2023
+
+@author: Irungu Josphat
+
+         Phillip kyule
+
+         """
 """ contains the entry point of the command interpreter
 """
 import cmd
