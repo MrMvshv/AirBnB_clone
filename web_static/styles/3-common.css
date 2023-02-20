@@ -1,0 +1,11 @@
+* {
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+a {
+    background-image: url(images/icon.png);
+}
+body {
+text-align: center;
+}
