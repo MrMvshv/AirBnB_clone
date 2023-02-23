@@ -8,3 +8,11 @@ align-items: center;
 justify-content: flex-start;
 padding-left: 20px;
 }
+
+.logo {
+    background-image: url('../images/logo.png');
+    margin-left: 20px;
+    height: 60px;
+    width: 140px;
+    border-bottom: none;
+}
