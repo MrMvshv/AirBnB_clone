@@ -108,6 +108,7 @@ article h2 {
 .amenities li {
     display: flex;
     margin: 0;
+    margin-left: 15px;
 }
 
 .amenities p{
